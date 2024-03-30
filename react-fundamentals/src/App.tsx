@@ -5,7 +5,7 @@ import AboutPage from './components/AboutPage';
 function App() {
   return (
     <div>
-      <h1>Hello, I just made my first button. Here it is.</h1>
+      <h1 className='header'>Hello, I just made my first button. Here it is.</h1>
       <Button />
       <AboutPage />
     </div>
