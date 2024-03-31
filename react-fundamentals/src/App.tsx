@@ -1,6 +1,7 @@
 import './App.css';
 import Button from './components/Button';
 import AboutPage from './components/AboutPage';
+import ListRender from './components/ListRender';
 
 let isLoggedIn;
 
@@ -19,7 +20,9 @@ function App() {
       <AboutPage />
       <br />
 
-      {content}
+      {content} <br />
+
+      <ListRender />
     </div>
   );
 }
