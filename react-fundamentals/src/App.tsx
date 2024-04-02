@@ -14,30 +14,68 @@ if (isLoggedIn) {
   content = <Button />
 }
 
+ function ProfilePage(){
+   return(
+     <Section isFancy={''}>
+         <Heading>My Profile</Heading>
+         <Post
+         title="Hello traveller!"
+         body="Read about my adventures." 
+         />
+         <AllPosts />
+       </Section>
+   )
+}
+
+function AllPosts(){
+  return (
+    <Section isFancy={''}>
+      <Heading>Posts</Heading>
+      <RecentPosts />
+    </Section>
+  );
+}
+
+function RecentPosts(){
+  return (
+    <Section isFancy={''}>
+      <Heading>Recent Posts</Heading>
+      <Post
+      title="Flavors of Kenya"
+      body="...those Chapatis!" 
+      />
+      <Post
+        title="Buenos Aires in the rhythm of tango"
+        body="I loved it!"
+       />
+    </Section>
+  );
+}
+
+function Post({ title, body} : {title: any, body: any}) {
+  return (
+    <Section isFancy={true}>
+      <Heading>
+        {title}
+      </Heading>
+      <p><i>{body}</i></p>
+    </Section>
+  )
+}
+
 function App() {
 
   return (
-
     <div>
-      <Section>
-        <Heading>Title</Heading>
-        <Section>
-          <Heading>Heading</Heading>
-          <Heading>Heading</Heading>
-          <Heading>Heading</Heading>
-          <Section>
-            <Heading>Sub-heading</Heading>
-            <Heading>Sub-heading</Heading>
-            <Heading>Sub-heading</Heading>
-            <Section>
-              <Heading>Sub-sub-heading</Heading>
-              <Heading>Sub-sub-heading</Heading>
-              <Heading>Sub-sub-heading</Heading>
-            </Section>
-          </Section>
-        </Section>
+
+    <Section isFancy={''}>
+        <Heading>My Profile</Heading>
+        <Post
+        title="Hello traveller!"
+        body="Read about my adventures." 
+        />
+        <AllPosts />
       </Section>
-      <br />
 
       <h1 className='header'>Hello, I just made my first button. Here it is.</h1>
       <Button />
